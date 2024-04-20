@@ -12,7 +12,10 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
-require __DIR__.'/auth.php';
+Route::view('tasks', 'task.table')
+    ->middleware(['auth'])
+    ->name('task.table');
+
 Route::view('tasks/create', 'task.create')
     ->middleware(['auth'])
     ->name('task.create');
